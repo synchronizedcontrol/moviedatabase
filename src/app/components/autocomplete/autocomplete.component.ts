@@ -41,7 +41,8 @@ export class AutocompleteComponent implements OnInit {
               {
                 id: movie.id,
                 movie_title: movie.data().movie_title,
-                gross: movie.data().gross
+                title_year: movie.data().title_year,
+                imdb_score: movie.data().imdb_score,
               }
             )
           })

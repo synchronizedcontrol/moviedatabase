@@ -8,7 +8,8 @@ export interface Movie {
 export interface SearchMovie {
   id: string,
   movie_title: string,
-  gross: number
+  title_year: number,
+  imdb_score: number,
 }
 
 export interface MovieDetail extends Movie {
