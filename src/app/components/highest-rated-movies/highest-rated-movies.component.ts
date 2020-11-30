@@ -21,6 +21,7 @@ export class HighestRatedMoviesComponent implements OnInit {
     this.moviesService.highestRatedMovies().onSnapshot((snap) => {
       snap.forEach((movie) => {
         const movieData = movie.data() as MovieDetail;
+        console.log(movieData);
         movieData.id = movie.id;
         movieData.durationCalculated = calculateDuration(movieData.duration);
         movieData.plot_keywords = removePipes(movieData.plot_keywords);

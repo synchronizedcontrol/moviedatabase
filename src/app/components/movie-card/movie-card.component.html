@@ -21,7 +21,10 @@
     <p class="card-text">
       <b>Movie grossing: </b> {{ movie.grossingCurrency }}
     </p>
-    <a [routerLink]="['/detail', movie.id]" class="btn btn-secondary btn-sm"
+    <a
+      *ngIf="movie.id"
+      [routerLink]="['/detail', movie.id]"
+      class="btn btn-secondary btn-sm"
       >Go to detail page</a
     >
   </div>
