@@ -1,0 +1,106 @@
+<h1 class="border-bottom border-danger pb-1">Add a movie</h1>
+<form [formGroup]="movieForm" (ngSubmit)="onSubmit(movieForm.value)">
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputAddress">Movie title</label>
+      <input
+        type="text"
+        class="form-control"
+        id="movie_title"
+        placeholder="Movie title"
+        formControlName="movie_title"
+      />
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputAddress">Director</label>
+      <input
+        type="text"
+        class="form-control"
+        id="director_name"
+        placeholder="Name of Director"
+        formControlName="director_name"
+      />
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-4">
+      <label for="inputAddress">Movie duration (in minutes)</label>
+      <input
+        type="number"
+        step="1"
+        class="form-control"
+        id="duration"
+        placeholder="Movie duration"
+        formControlName="duration"
+      />
+    </div>
+    <div class="form-group col-md-4">
+      <label for="budget">Movie budget</label>
+      <input
+        type="number"
+        class="form-control"
+        id="budget"
+        placeholder="Movie budget"
+        formControlName="budget"
+      />
+    </div>
+    <div class="form-group col-md-4">
+      <label for="imdb_score">Score on IMDB</label>
+      <input
+        type="number"
+        step="0.1"
+        class="form-control"
+        id="imdb_score"
+        placeholder="Score on IMDB"
+        formControlName="imdb_score"
+      />
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-4">
+      <label for="Title_year">Release date</label>
+      <input
+        type="date"
+        class="form-control"
+        id="Title_year"
+        placeholder="Date of release"
+        formControlName="Title_year"
+      />
+    </div>
+    <div class="form-group col-md-4">
+      <label for="country">Country</label>
+      <input
+        type="text"
+        maxlength="3"
+        class="form-control"
+        id="country"
+        placeholder="Country"
+        formControlName="country"
+      />
+    </div>
+    <div class="form-group col-md-4">
+      <label for="language">Spoken language</label>
+      <select id="language" class="form-control" formControlName="language">
+        <option selected>Choose...</option>
+        <option value="English">English</option>
+        <option value="Spanish">Spanish</option>
+        <option value="German">German</option>
+        <option value="Russian">Russian</option>
+        <option value="Chinese">Chinese</option>
+        <option value="French">French</option>
+        <option value="Portuguese">Portuguese</option>
+      </select>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="genres">Movie genres (comma separated)</label>
+    <input
+      type="text"
+      class="form-control"
+      id="genres"
+      placeholder="Sci-Fi, Adventure, Humor"
+      formControlName="genres"
+    />
+  </div>
+  <button type="submit" class="btn btn-primary">Save movie</button>
+</form>

@@ -1,0 +1,9 @@
+<p>movies works!</p>
+<table>
+  <tbody>
+    <tr *ngFor="let movie of moviesList">
+      <td>{{ movie.payload.doc.data().movie_title }}</td>
+      <td>{{ movie.payload.doc.data().gross }}</td>
+    </tr>
+  </tbody>
+</table>

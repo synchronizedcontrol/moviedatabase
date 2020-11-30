@@ -1,0 +1,32 @@
+.movie-title {
+  height: 100px;
+  padding: 20px;
+}
+
+.movie-title .movie-year {
+  display: inline-flex;
+  color: #bfbfbf;
+  margin-left: 7px;
+}
+
+.movie-title .extra-info {
+  display: flex;
+  margin-top: 15px;
+  justify-content: space-between;
+  width: 98%;
+}
+
+.movie-rating {
+  display: inline-flex;
+  justify-content: flex-end;
+}
+
+.movie-rating i {
+  color: yellow;
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.btn {
+  margin-top: 10px;
+}

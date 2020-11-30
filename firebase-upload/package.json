@@ -1,0 +1,19 @@
+{
+  "name": "firebase-upload",
+  "version": "1.0.0",
+  "description": "Firebase upload script",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Firebase",
+    "upload",
+    "admin"
+  ],
+  "author": "Jorden Mik",
+  "license": "ISC",
+  "dependencies": {
+    "firebase-admin": "^9.4.1"
+  }
+}

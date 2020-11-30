@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="card mt-5">
+    <h5 class="card-header movie-title text-white bg-dark mb-3">
+      {{ movie.movie_title }}
+      <div class="movie-year">{{ movie.title_year }}</div>
+      <div class="movie-rating">
+        <i class="material-icons">star</i> {{ movie.imdb_score }}
+      </div>
+      <div class="extra-info">
+        <div>{{ movie.content_rating }}</div>
+        <div>{{ " | " }}{{ movie.durationCalculated }}</div>
+        <div>{{ " | " }}{{ movie.genres }}</div>
+        <div>{{ " | " }}{{ movie.plot_keywords }}</div>
+        <div>{{ " | " }}A {{ movie.director_name }} movie</div>
+      </div>
+    </h5>
+    <div class="card-body">
+      <p class="card-text"><b>Director: </b> {{ movie.director_name }}</p>
+      <p class="card-text">
+        <b>Actors: </b> {{ movie.actor_1_name }}, {{ movie.actor_2_name }},
+        {{ movie.actor_3_name }}
+      </p>
+      <p class="card-text"><b>Country: </b> {{ movie.country }}</p>
+      <p class="card-text">
+        <b>Movie expenses: </b> {{ movie.budgetCurrency }}
+      </p>
+      <p class="card-text">
+        <b>Movie grossing: </b> {{ movie.grossingCurrency }}
+      </p>
+      <a
+        [routerLink]="['movie.movie_imdb_link']"
+        class="btn btn-secondary btn-sm"
+        target="_blank"
+        >Go to imdb page</a
+      >
+    </div>
+  </div>
+</div>

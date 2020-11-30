@@ -9,6 +9,7 @@
 
 # dependencies
 /node_modules
+/firebase-upload/node_modules
 
 # profiling files
 chrome-profiler-events*.json
@@ -36,6 +37,8 @@ speed-measure-plugin*.json
 /connect.lock
 /coverage
 /libpeerconnection.log
+/firebase-upload/settings
+/src/environments
 npm-debug.log
 yarn-error.log
 testem.log

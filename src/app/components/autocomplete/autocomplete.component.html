@@ -1,0 +1,24 @@
+<mat-form-field class="w-100">
+  <input
+    matInput
+    placeholder="Search movies..."
+    type="text"
+    aria-label="State"
+    [matAutocomplete]="auto"
+    [formControl]="searchMoviesCtrl"
+  />
+  <mat-autocomplete #auto="matAutocomplete">
+    <mat-option *ngIf="isLoading" class="is-loading">Loading...</mat-option>
+    <ng-container *ngIf="!isLoading">
+      <mat-option
+        *ngFor="let movie of filteredMovies"
+        [value]="movie.movie_title"
+        routerLink="/detail/{{ movie.id }}"
+      >
+        <span
+          ><b>{{ movie.movie_title }} ({{ movie.gross }})</b></span
+        >
+      </mat-option>
+    </ng-container>
+  </mat-autocomplete>
+</mat-form-field>
