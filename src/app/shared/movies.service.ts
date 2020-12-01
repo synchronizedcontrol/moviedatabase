@@ -26,7 +26,7 @@ export class MoviesService {
   }
 
   highestGrossingMovies () {
-    return this.firedatabase.firestore.collection("movies").orderBy("gross", "desc").limit(3);
+    return this.firedatabase.firestore.collection("movies").where('gross', '>', 0).orderBy("gross", "desc").limit(3);
   }
 
   highestRatedMovies () {
